@@ -13,12 +13,12 @@ jobs:
   build:
     <<: *default_env
     steps:
-      checkout
+      - checkout
       - npm_init
-      save_cache:
-        key: "npm-packages"
-        paths:
-          - ./node_modules
+      - save_cache:
+          key: "npm-packages"
+          paths:
+            - ./node_modules
       - run: npm run lint
 
   test:
