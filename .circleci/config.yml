@@ -7,13 +7,13 @@ default: &default_env
 commands:
   npm_init:
     steps:
-      - checkout
       - run: npm i
 
 jobs:
   build:
     <<: *default_env
     steps:
+      checkout
       - npm_init
       - save_cache:
           key: "npm-packages"
