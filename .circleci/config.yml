@@ -36,7 +36,8 @@ jobs:
       - run: npm audit
 
 workflows:
-  jobs:
+  react-slingshot:
+    jobs:
     - build
     - test:
         requires: [build]
