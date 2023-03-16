@@ -24,6 +24,7 @@ jobs:
   test:
     <<: *default_env
     steps:
+      - checkout
       - restore_cache:
           key: "npm-packages"
       - npm_init
