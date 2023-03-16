@@ -7,7 +7,7 @@ default: &default_env
 commands:
   npm_init:
     steps:
-      - run: checkout
+      - checkout
       - run: npm i
 
 jobs:
