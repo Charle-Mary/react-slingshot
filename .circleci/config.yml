@@ -33,7 +33,7 @@ jobs:
   analyze:
     <<: *default_env
     steps:
-      - run: checkout
+      - checkout
       - run: npm audit
 
 workflows:
