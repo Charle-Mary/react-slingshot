@@ -19,7 +19,7 @@ jobs:
           key: "npm-packages"
           paths:
             - ./node_modules
-      - run: npm run build
+      - run: npm run lint
 
   test:
     <<: *default_env
